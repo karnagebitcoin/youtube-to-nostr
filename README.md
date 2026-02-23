@@ -22,7 +22,7 @@ Chrome extension to create timestamped YouTube share links, preview before shari
 1. Open `chrome://extensions`.
 2. Enable `Developer mode`.
 3. Click `Load unpacked`.
-4. Select this folder: `/Users/k/code/clip-youtube`.
+4. Select this folder: `clip-youtube`.
 
 ## Usage
 
