@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Youtube to Nostr",
+  "version": "0.1.0",
+  "description": "Share timestamped YouTube videos to Nostr or URL with preview and history.",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://*.youtube.com/*"
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "action": {
+    "default_title": "Youtube to Nostr",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["nostr-bridge.js"],
+      "matches": ["https://www.youtube.com/*"]
+    }
+  ]
+}

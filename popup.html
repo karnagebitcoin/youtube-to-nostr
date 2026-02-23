@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Youtube to Nostr</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header>
+        <h1>Share History</h1>
+        <p>Saved timestamped YouTube shares</p>
+      </header>
+
+      <div class="actions">
+        <button id="refresh-btn">Refresh</button>
+      </div>
+
+      <section id="history-list" class="history-list"></section>
+      <div id="status" class="status"></div>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
